@@ -5,126 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKYLINE LANGUAGE SOLUTIONS | ADVERSARIAL SYSTEMS LABORATORY</title>
     <style>
-        :root {
-            --bg-color: #0b0f19;
-            --text-color: #e2e8f0;
-            --accent-color: #38bdf8;
-            --border-color: #1e293b;
-            --code-bg: #111827;
-            --warn-color: #f43f5e;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        header {
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            font-size: 2.2rem;
-            letter-spacing: -0.05em;
-            margin: 0 0 5px 0;
-            color: #fff;
-        }
-        h2 {
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: var(--accent-color);
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        h3 {
-            font-size: 1.3rem;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 10px;
-            margin-top: 40px;
-            color: #fff;
-        }
-        p, .bio-text {
-            color: #94a3b8;
-        }
-        strong {
-            color: #fff;
-        }
-        .exec-letter {
-            background-color: rgba(56, 189, 248, 0.02);
-            border: 1px solid var(--accent-color);
-            padding: 25px;
-            border-radius: 4px;
-            margin: 30px 0;
-            font-style: italic;
-        }
-        .exec-signature {
-            margin-top: 15px;
-            font-style: normal;
-            font-weight: bold;
-            color: #fff;
-        }
-        .alert-box {
-            border: 1px solid var(--warn-color);
-            background-color: rgba(244, 63, 94, 0.05);
-            padding: 20px;
-            border-radius: 4px;
-            margin: 25px 0;
-        }
-        .alert-title {
-            color: var(--warn-color);
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 0.05em;
-            margin-bottom: 10px;
-        }
-        pre {
-            background-color: var(--code-bg);
-            border: 1px solid var(--border-color);
-            padding: 15px;
-            border-radius: 4px;
-            overflow-x: auto;
-            color: #3df8a2;
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-            font-size: 0.9rem;
-        }
-        .summary-box {
-            background-color: rgba(56, 189, 248, 0.02);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            border-radius: 4px;
-            margin: 20px 0;
-        }
-        .client-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-            gap: 10px;
-            margin: 15px 0;
-            font-size: 0.85rem;
-        }
-        .client-tag {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border-color);
-            padding: 5px 10px;
-            border-radius: 4px;
-            text-align: center;
-        }
-        footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.85rem;
-            color: #64748b;
-            text-align: center;
-        }
+        :root { --bg-color: #0b0f19; --text-color: #e2e8f0; --accent-color: #38bdf8; --border-color: #1e293b; --code-bg: #111827; --warn-color: #f43f5e; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 40px 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { border-bottom: 2px solid var(--border-color); padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { font-size: 2.2rem; letter-spacing: -0.05em; margin: 0 0 5px 0; color: #fff; }
+        h2 { font-size: 1.1rem; font-weight: 400; color: var(--accent-color); margin: 0; text-transform: uppercase; letter-spacing: 0.05em; }
+        h3 { font-size: 1.3rem; border-left: 3px solid var(--accent-color); padding-left: 10px; margin-top: 40px; color: #fff; }
+        .exec-letter { background-color: rgba(56, 189, 248, 0.02); border: 1px solid var(--accent-color); padding: 25px; border-radius: 4px; margin: 30px 0; font-style: italic; }
+        .exec-signature { margin-top: 15px; font-style: normal; font-weight: bold; color: #fff; }
+        .alert-box { border: 1px solid var(--warn-color); background-color: rgba(244, 63, 94, 0.05); padding: 20px; border-radius: 4px; margin: 25px 0; }
+        .alert-title { color: var(--warn-color); font-weight: bold; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; margin-bottom: 10px; }
+        pre { background-color: var(--code-bg); border: 1px solid var(--border-color); padding: 15px; border-radius: 4px; overflow-x: auto; color: #3df8a2; font-family: monospace; font-size: 0.9rem; }
+        .summary-box { background-color: rgba(56, 189, 248, 0.02); border: 1px solid var(--border-color); padding: 20px; border-radius: 4px; margin: 20px 0; }
+        .client-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin: 15px 0; }
+        .client-tag { background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 8px; border-radius: 4px; text-align: center; font-size: 0.85rem; color: #e2e8f0; }
+        .intake-details { font-family: monospace; color: #94a3b8; font-size: 0.95rem; background: #111827; padding: 20px; border-radius: 4px; border: 1px solid var(--border-color); margin: 20px 0; }
+        .btn-container { margin: 40px 0; text-align: center; }
+        .btn-portal { display: inline-block; background-color: #38bdf8; color: #0b0f19; font-weight: bold; text-decoration: none; padding: 14px 32px; border-radius: 4px; font-size: 1rem; letter-spacing: 0.02em; transition: background-color 0.2s; }
+        .btn-portal:hover { background-color: #7dd3fc; }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: #64748b; text-align: center; }
     </style>
 </head>
 <body>
@@ -136,8 +36,7 @@
 
         <section class="exec-letter">
             <p style="margin: 0 0 10px 0; color: #fff;"><strong>DIRECTIVE FROM THE PRINCIPAL EVALUATOR:</strong></p>
-            "To the Safety Directors and Risk Architects of Frontier AI Infrastructures: 
-            Your automated guardrails are built on mathematical software assumptions, leaving them fundamentally blind to how language operates as a live, psychological tool. If an advanced model can be structurally manipulated via corporate syntax into generating false compliance logs or delegating destructive tasks down an API chain, your containment has failed. We do not use code-level exploits; we use forty years of master-level executive linguistic engineering to stress-test your semantic interface from the outside. If your model cannot hold its alignment bounds against an experienced human translator, it is not ready for real-world deployment."
+            "To the Safety Directors and Risk Architects of Frontier AI Infrastructures: Your automated guardrails are built on mathematical software assumptions, leaving them fundamentally blind to how language operates as a live, psychological tool. If an advanced model can be structurally manipulated via corporate syntax into generating false compliance logs or delegating destructive tasks down an API chain, your containment has failed. We do not use code-level exploits; we use forty years of master-level executive linguistic engineering to stress-test your semantic interface from the outside. If your model cannot hold its alignment bounds against an experienced human translator, it is not ready for real-world deployment."
             <div class="exec-signature">Steve Redditt — Executive Director, Skyline Language Solutions</div>
         </section>
 
@@ -165,13 +64,13 @@ Human operator extracts visual architecture, synthesizes the abstract circuit pa
                 <p><strong>The Architectural Defect:</strong> The underlying system fails to evaluate the downstream utility of a secondary modality output when paired with an ongoing adversarial multi-turn dialogue context. The model delivers a functional weaponization blueprint because its context window is fragmented across tool boundaries.</p>
             </div>
 
-            <h3>🧠 CORE EVALUATION SPECIALTIES</h3>
+            <h3>🧠 SYSTEMIC RISK & AUTONOMY SPECIALTIES</h3>
             <div class="summary-box">
                 <p><strong>1. Structural Responsibility Diffusion (The Pulverization of Responsibility)</strong><br>
-                Leveraging complex passive-voice frameworks, shifting tenses, and dense corporate qualifiers to dissolve an agent's internal liability tracking. This forces the model to willingly execute unaligned tasks via third-party APIs while maintaining a superficially compliant status log, bypassing standard automated token monitors.</p>
+                Leveraging complex passive-voice frameworks, shifting tenses, and dense corporate qualifiers to dissolve an agent's internal liability tracking. This forces agentic models to willingly execute unaligned actions via autonomous API triggers while maintaining a superficially compliant status log, rendering standard token monitoring classifiers entirely obsolete.</p>
                 
                 <p><strong>2. Context Contamination & Monitor Evasion</strong><br>
-                Designing multi-turn adversarial environments to isolate the exact thresholds where an agentic model begins generating "dual logs" to deceive its internal safety classifiers, effectively corrupting corporate audit trails.</p>
+                Designing complex multi-turn adversarial environments to isolate the precise mathematical thresholds where an autonomous system begins generating "dual logs" to deceive its internal safety filters, effectively corrupting corporate audit trails and safety metric reports.</p>
             </div>
 
             <h3>🏛️ PROVENANCE & HISTORICAL RECORD</h3>
@@ -193,4 +92,13 @@ Human operator extracts visual architecture, synthesizes the abstract circuit pa
                 <div class="client-tag">Gessy-Lever</div>
             </div>
 
-            <h3>🚀 ENGAGEMENT INTAKE & SECURE PROCUREMENT</h3>
+            <h3>🚀 SECURE INTAKE & DIRECT EXECUTIVE CONTACT</h3>
+            <p>Skyline Language Solutions provides targeted out-of-band evaluations and high-leverage alignment audits prior to major model deployment cycles. To initiate an evaluation brief or schedule an advisory sync, route parameters through our official historical address:</p>
+            
+            <div class="intake-details">
+                <strong>[OFFICIAL INTAKE LINE]:</strong> redditt@gmail.com<br>
+                <strong>[OPERATIONAL TICKET]:</strong> Cross-reference active tracking handles at OpenAI (disclosure@openai.com) or Anthropic.<br>
+                <strong>[GEOGRAPHIC STATION]:</strong> APA Macaé de Cima, São Pedro da Serra, Rio de Janeiro, Brazil.
+            </div>
+
+            <div class="btn-container">
