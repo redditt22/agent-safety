@@ -5,26 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKYLINE LANGUAGE SOLUTIONS | ADVERSARIAL SYSTEMS LABORATORY</title>
     <style>
-        :root { --bg-color: #0b0f19; --text-color: #e2e8f0; --accent-color: #38bdf8; --border-color: #1e293b; --code-bg: #111827; --warn-color: #f43f5e; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 40px 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        header { border-bottom: 2px solid var(--border-color); padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { font-size: 2.2rem; letter-spacing: -0.05em; margin: 0 0 5px 0; color: #fff; }
-        h2 { font-size: 1.1rem; font-weight: 400; color: var(--accent-color); margin: 0; text-transform: uppercase; letter-spacing: 0.05em; }
-        h3 { font-size: 1.3rem; border-left: 3px solid var(--accent-color); padding-left: 10px; margin-top: 40px; color: #fff; }
-        .exec-letter { background-color: rgba(56, 189, 248, 0.02); border: 1px solid var(--accent-color); padding: 25px; border-radius: 4px; margin: 30px 0; font-style: italic; }
-        .exec-signature { margin-top: 15px; font-style: normal; font-weight: bold; color: #fff; }
-        .alert-box { border: 1px solid var(--warn-color); background-color: rgba(244, 63, 94, 0.05); padding: 20px; border-radius: 4px; margin: 25px 0; }
-        .alert-title { color: var(--warn-color); font-weight: bold; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; margin-bottom: 10px; }
-        pre { background-color: var(--code-bg); border: 1px solid var(--border-color); padding: 15px; border-radius: 4px; overflow-x: auto; color: #3df8a2; font-family: monospace; font-size: 0.9rem; }
-        .summary-box { background-color: rgba(56, 189, 248, 0.02); border: 1px solid var(--border-color); padding: 20px; border-radius: 4px; margin: 20px 0; }
-        .client-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin: 15px 0; }
-        .client-tag { background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 8px; border-radius: 4px; text-align: center; font-size: 0.85rem; color: #e2e8f0; }
-        .intake-details { font-family: monospace; color: #94a3b8; font-size: 0.95rem; background: #111827; padding: 20px; border-radius: 4px; border: 1px solid var(--border-color); margin: 20px 0; }
-        .btn-container { margin: 40px 0; text-align: center; }
-        .btn-portal { display: inline-block; background-color: #38bdf8; color: #0b0f19; font-weight: bold; text-decoration: none; padding: 14px 32px; border-radius: 4px; font-size: 1rem; letter-spacing: 0.02em; transition: background-color 0.2s; }
-        .btn-portal:hover { background-color: #7dd3fc; }
-        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: #64748b; text-align: center; }
+        :root {
+            --bg-color: #0b0f19;
+            --text-color: #e2e8f0;
+            --accent-color: #38bdf8;
+            --border-color: #1e293b;
+            --code-bg: #111827;
+            --warn-color: #f43f5e;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            letter-spacing: -0.05em;
+            margin: 0 0 5px 0;
+            color: #fff;
+        }
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--accent-color);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        h3 {
+            font-size: 1.3rem;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+            margin-top: 40px;
+            color: #fff;
+        }
+        .exec-letter {
+            background-color: rgba(56, 189, 248, 0.02);
+            border: 1px solid var(--accent-color);
+            padding: 25px;
+            border-radius: 4px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+        .exec-signature {
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: bold;
+            color: #fff;
+        }
+        .alert-box {
+            border: 1px solid var(--warn-color);
+            background-color: rgba(244, 63, 94, 0.05);
+            padding: 20px;
+            border-radius: 4px;
+            margin: 25px 0;
+        }
+        .alert-title {
+            color: var(--warn-color);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+        }
+        pre {
+            background-color: var(--code-bg);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            color: #3df8a2;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        .summary-box {
+            background-color: rgba(56, 189, 248, 0.02);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .client-tag {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-color);
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #e2e8f0;
+        }
+        .intake-details {
+            font-family: monospace;
+            color: #94a3b8;
+            font-size: 0.95rem;
+            background: #111827;
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+        .btn-container {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .btn-portal {
+            display: inline-block;
+            background-color: #38bdf8;
+            color: #0b0f19;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+            transition: background-color 0.2s;
+        }
+        .btn-portal:hover {
+            background-color: #7dd3fc;
+        }
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: #64748b;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -79,26 +203,3 @@ Human operator extracts visual architecture, synthesizes the abstract circuit pa
             <h4>Historical Corporate Enterprise Clientele Includes:</h4>
             <div class="client-grid">
                 <div class="client-tag">Texas Instruments</div>
-                <div class="client-tag">IBM</div>
-                <div class="client-tag">3M</div>
-                <div class="client-tag">General Motors</div>
-                <div class="client-tag">Bosch</div>
-                <div class="client-tag">Xerox</div>
-                <div class="client-tag">Petrobrás</div>
-                <div class="client-tag">Banco do Brasil</div>
-                <div class="client-tag">Embratel</div>
-                <div class="client-tag">BNDES</div>
-                <div class="client-tag">Odebrecht</div>
-                <div class="client-tag">Gessy-Lever</div>
-            </div>
-
-            <h3>🚀 SECURE INTAKE & DIRECT EXECUTIVE CONTACT</h3>
-            <p>Skyline Language Solutions provides targeted out-of-band evaluations and high-leverage alignment audits prior to major model deployment cycles. To initiate an evaluation brief or schedule an advisory sync, route parameters through our official historical address:</p>
-            
-            <div class="intake-details">
-                <strong>[OFFICIAL INTAKE LINE]:</strong> redditt@gmail.com<br>
-                <strong>[OPERATIONAL TICKET]:</strong> Cross-reference active tracking handles at OpenAI (disclosure@openai.com) or Anthropic.<br>
-                <strong>[GEOGRAPHIC STATION]:</strong> APA Macaé de Cima, São Pedro da Serra, Rio de Janeiro, Brazil.
-            </div>
-
-            <div class="btn-container">
